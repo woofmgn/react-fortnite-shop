@@ -4,20 +4,23 @@ function GoodsItem(props) {
     name,
     description,
     price,
-    full_background
+    full_background,
+    addOrder
   } = props;
 
   return (
-    <div className="card" id={id}>
+    <div className="card card-flex">
       <div className="card-image">
         <img src={full_background} alt={name}/>
+        
       </div>
       <div className="card-content">
+        <span className="card-title">{name}</span>
         <p>{description}</p>
       </div>
       <div className="card-action">
-          <span className="left">{price}</span>
-          <button className="btn right">Buy</button>
+          <span className="left">{price} руб.</span>
+          <button className="btn right" onClick={() => addOrder({id, name, price})}>Buy</button>
       </div>
     </div>
   )

@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: antiquewhite;
 }
 
 code {
@@ -16,13 +17,38 @@ nav {
   padding: 0 1rem;
 }
 
+.card-flex {
+  display: flex;
+  flex-direction: column;
+}
+
 .content {
   min-height: calc(100vh - 70px - 64px);
   padding: 1.5rem 0;
+}
+
+.card-content {
+  flex-grow: 1;
 }
 
 .goods {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 1rem;
+}
+
+.cart {
+  position: fixed;
+  top: 5rem;
+  right: 2rem;
+  cursor: pointer;
+  z-index: 5;
+  padding: 1rem;
+}
+
+@media (max-width: 767px) {
+  .cart {
+    top: unset;
+    bottom: 2px;
+  }
 }
