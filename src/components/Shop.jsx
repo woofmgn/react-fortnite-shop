@@ -1,15 +1,17 @@
 import {useState, useEffect} from 'react';
-import {apiKey, apiUrl} from '../config'
-import {Preloader} from './Preloader'
-import {GoodsList} from './GoodsList'
-import {Cart} from './Cart'
-import {BasketList} from './BasketList'
+import {apiKey, apiUrl} from '../config';
+import {Preloader} from './Preloader';
+import {GoodsList} from './GoodsList';
+import {Cart} from './Cart';
+import {BasketList} from './BasketList';
+import {Alert} from './Alert';
 
 function Shop() {
   const [goods, setGoods] = useState([]);
   const [loading, setLoading] = useState(true);
   const [order, setOrder] = useState([])
   const [isBasketShow, setBasketShow] = useState(false);
+  const [alertName, setAlertName] = useState('');
 
   const addOrder = (item) => {
     const itemIndex = order.findIndex((orderItem) => orderItem.id === item.id);
@@ -33,6 +35,8 @@ function Shop() {
       });
     setOrder(newOrder);
     }
+    
+    setAlertName(item.name);
   }
 
   const removeOrder = (itemId) => {
@@ -74,7 +78,9 @@ function Shop() {
     setOrder(newOrder);
   }
 
-
+  const closeAlert = () => {
+    setAlertName('');
+  }
 
   useEffect(function getGoods() {
     fetch(apiUrl, {
@@ -96,7 +102,17 @@ function Shop() {
         loading ? <Preloader /> : <GoodsList goods={goods} addOrder={addOrder}/>
       }
       {
-        isBasketShow && <BasketList order={order} handleBasketShow={handleBasketShow} removeOrder={removeOrder} incrementQuantity={incrementQuantity} decrimentQuantity={decrimentQuantity}/>
+        isBasketShow && (
+          <BasketList 
+            order={order} 
+            handleBasketShow={handleBasketShow} 
+            removeOrder={removeOrder} 
+            incrementQuantity={incrementQuantity} 
+            decrimentQuantity={decrimentQuantity}
+          />
+      )}
+      {
+        alertName && <Alert name={alertName} closeAlert={closeAlert}/>
       }
     </main>
   )

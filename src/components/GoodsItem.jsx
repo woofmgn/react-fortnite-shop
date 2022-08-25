@@ -20,7 +20,7 @@ function GoodsItem(props) {
       </div>
       <div className="card-action">
           <span className="left">{price} руб.</span>
-          <button className="btn right" onClick={() => addOrder({id, name, price})}>Buy</button>
+          <button className="btn right" onClick={() => addOrder({id, name, price})}>КУПИТЬ</button>
       </div>
     </div>
   )
