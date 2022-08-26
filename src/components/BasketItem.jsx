@@ -2,18 +2,10 @@ import { useContext } from "react";
 import { ShopContext } from "../context";
 
 function BasketItem(props) {
-  const {
-    id,
-    name,
-    price,
-    quantity,
-    removeOrder,
-    incrementQuantity,
-    decrimentQuantity,
-  } = props;
+  const { id, name, price, quantity } = props;
 
-  const { example } = useContext(ShopContext);
-  console.log(example);
+  const { removeFromBasket, incrimentQuantity, decrimentQuantity } =
+    useContext(ShopContext);
 
   return (
     <li className="collection-item grey lighten-4">
@@ -27,12 +19,12 @@ function BasketItem(props) {
       {quantity} шт.
       <i
         className="material-icons set-quantity-icons"
-        onClick={() => incrementQuantity(id)}
+        onClick={() => incrimentQuantity(id)}
       >
         keyboard_arrow_right
       </i>{" "}
       = {price * quantity} руб.
-      <span className="secondary-content" onClick={() => removeOrder(id)}>
+      <span className="secondary-content" onClick={() => removeFromBasket(id)}>
         <i className="material-icons basket-delete">cancel</i>
       </span>
     </li>

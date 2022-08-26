@@ -18,6 +18,10 @@ export const ContextProvider = ({ children }) => {
     dispatch({ type: "CLOSE_ALERT" });
   };
 
+  value.setGoods = (data) => {
+    dispatch({ type: "SET_GOODS", payload: data });
+  };
+
   value.addToBasket = (item) => {
     dispatch({ type: "ADD_TO_BASKET", payload: item });
   };
