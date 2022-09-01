@@ -9,6 +9,8 @@
 
 В планах по развитию проекта: доработка функциональности и внешнего вида.
 
+Ссылка на проект react-fortnite-shop.vercel.app
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
