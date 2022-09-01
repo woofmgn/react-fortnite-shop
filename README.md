@@ -1,3 +1,14 @@
+# Проект: Fortnite-shop
+
+Проект представляет из себя приложение, позволяющее пользователю выбрать понравившиеся товары и добавить в корзину.
+
+При создании проекта использованы технологии:
+
+- React.js
+- REST API
+
+В планах по развитию проекта: доработка функциональности и внешнего вида.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
