@@ -9,7 +9,7 @@
 
 В планах по развитию проекта: доработка функциональности и внешнего вида.
 
-Ссылка на проект react-fortnite-shop.vercel.app
+Ссылка на проект [react-fortnite-shop.vercel.app](react-fortnite-shop.vercel.app "react-fortnite-shop.vercel.app")
 
 # Getting Started with Create React App
 
