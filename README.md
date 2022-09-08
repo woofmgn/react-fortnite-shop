@@ -9,7 +9,13 @@
 
 В планах по развитию проекта: доработка функциональности и внешнего вида.
 
-Ссылка на проект [react-fortnite-shop.vercel.app](react-fortnite-shop.vercel.app "react-fortnite-shop.vercel.app")
+Ссылка на демо проект [react-fortnite-shop.vercel.app](react-fortnite-shop.vercel.app "react-fortnite-shop.vercel.app")
+
+___
+#### For the project to work, you need to install npm packages from dependencies, 
+#### to do this, in the directory with the project, run:
+### `npm install`
+___
 
 # Available Scripts
 
