@@ -4,16 +4,19 @@
 
 При создании проекта использованы технологии:
 
+- JavaScrypt
 - React.js
 - REST API
+- Materialize-css
 
 В планах по развитию проекта: доработка функциональности и внешнего вида.
 
 Ссылка на демо проект [react-fortnite-shop.vercel.app](react-fortnite-shop.vercel.app "react-fortnite-shop.vercel.app")
 
 ___
-#### For the project to work, you need to install npm packages from dependencies, 
-#### to do this, in the directory with the project, run:
+
+#### Для работы проекта необходимо установить npm-пакеты из зависимостей,
+#### для этого в каталоге с проектом выполните:
 ### `npm install`
 ___
 
